@@ -7,6 +7,8 @@ let message = "arg is of type "
 func getType(arg: Any) -> String {
     if arg is Int {
         return message + "Integer"
+    } else if arg is Bool {
+        return message + "Boolean"
     } else if arg is String {
         return message + "String"
     } else if arg is Float {
@@ -27,3 +29,4 @@ let dict: [String:Any] = ["name": "Kennedy", "username": "codejockie", "stars": 
 print(getType(arg: dict)) // arg is of type Dictionary<String, Any>
 print(getType(arg: message)) // arg is of type String
 print(getType(arg: 10)) // arg is of type Integer
+print(getType(arg: true)) // arg is of type Boolean
